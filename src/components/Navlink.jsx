@@ -1,41 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { faUser, faHome } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-// buat style navlink active 
-
-function Navlink({ state }) {
-  const classes = "absolute z-20 right-[13px] mt-8 max-h-[140] items-center h-[130px] box-border overflow-hidden flex flex-col justify-between";
-    
-
-  const [useClass, setUseClass] = useState("")
-  const [path, setPath] = useState("/")
-
-
-  useEffect(() => {
-    if (state == 0) {
-      setUseClass("rounded-full w-fit py-3 px-4 bg-lavender-500 animate-navIconLeave")
-    } 
-    else if (state == -1) {
-      setUseClass("rounded-full w-fit py-3 px-4 bg-lavender-500 hidden")
-    }
-    else {
-      setUseClass("rounded-full w-fit py-3 px-4 bg-lavender-500 animate-navIconActive")
-    }
-  }, [state])
+function Navlink() {  
+  const variants = {
+    "animate" : (custom) => ({
+      y: ["-200px", "0px"],
+      transition: {
+        ease: "easeIn",
+        delay: custom * 0.2,
+      },
+    })
+  }
 
   return (
-    <div className={classes}>
-      <Link to="/" className={useClass}>
-        <FontAwesomeIcon icon={faHome} className="text-lg text-white" />
-      </Link>
-      <Link to="/about" className={useClass}>
-        <FontAwesomeIcon icon={faUser} className="text-lg text-white" />
-      </Link>
+    <div className=' p-6 absolute z-20 right-[-2px] mt-8 max-h-[140] items-center h-[130px] box-border overflow-hidden flex flex-col top-5 gap-y-10'>
+      <motion.div
+        animate='animate'
+        variants={variants}
+        custom={1}
+        >-
+        <Link className='bg-lavender-500 rounded-full py-[8px] px-[10px]'>
+          <FontAwesomeIcon icon={faHome} className="text-white"/>          
+        </Link>
+      </motion.div>
+      <motion.div
+        animate='animate'
+        variants={variants}
+        custom={2}
+        >
+        <Link className='bg-whtie rounded-full py-[8px] px-[10px] bg-white hover:bg-lavender-500'>
+          <FontAwesomeIcon icon={faUser} className="text-lavender-600"/>          
+        </Link>
+      </motion.div>
     </div>
-  );
+  )
 }
 
-export default Navlink;
+export default Navlink
