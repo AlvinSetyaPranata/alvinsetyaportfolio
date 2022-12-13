@@ -1,6 +1,6 @@
-Debug-1:
-    ✔ Fix first section on About page @done(22-12-01 07:19)
-    ✔ Add href into all external links @done(22-12-03 16:14)
-    ☐ Fix navlink state to handle active state or not
-    ☐ Fix navlink style on deactive and active
-    ☐ Make it responsive
+DEVELOPMENT:
+    ☐ Make hamburger button with svg path
+    ☐ Create state that can pass to the navlink
+    ☐ Make navlink and the transition
+    ☐ Make Responsive navbar make sure it's not overflowing when shrinking and growing
+

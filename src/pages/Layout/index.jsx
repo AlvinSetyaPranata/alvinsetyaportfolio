@@ -1,19 +1,13 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Navbar from "../../components/Navbar"
-import Transition from "../../components/Transition";
-import Footer from "../../components/Footer";
-
-// fix footer
+import {Outlet} from 'react-router-dom'
+import Navbar from '../../components/Navbar'
 
 
 function Layout() {
   return (
-    <div className='container min-w-screen min-h-screen max-h-max max-w-screen'>
+    <div className="min-w-screen h-max bg-red-500">
         <Navbar />
-        <Transition />        
         <Outlet />
-        <Footer />
     </div>
   )
 }

@@ -1,14 +1,19 @@
-import React from "react";
-import { HashRouter } from "react-router-dom";
-import AnimateRoute from "./PagesTransition";
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from '../pages/Layout'
+import Home from '../pages/Home'
+
 
 function Routers() {
-
   return (
-    <HashRouter>
-      <AnimateRoute />
-    </HashRouter>
-  );
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route path="/home" element={<Home />} />
+            </Route>
+        </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default Routers;
+export default Routers
