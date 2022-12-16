@@ -8,7 +8,7 @@ function Layout() {
     <div className="min-w-screen h-max">
       <Navbar />
       <Suspense>
-        <div className="py-[90px] h-screen max-w-[1024px]">
+        <div className="h-max max-w-[1024px] mx-auto">
           <Outlet />
         </div>
       </Suspense>

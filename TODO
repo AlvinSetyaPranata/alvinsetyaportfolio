@@ -1,6 +1,7 @@
 DEVELOPMENT:
     ✔ Make hamburger button with animation @done(22-12-14 17:15)
     ✔ Create hero section @done(22-12-14 20:11)
+    ☐ Create all section in mainpage @started(22-12-16 09:32)
     ☐ Create state that can pass to the navlink
     ☐ Make navlink and the transition
     ☐ Make Responsive navbar make sure it's not overflowing when shrinking and growing

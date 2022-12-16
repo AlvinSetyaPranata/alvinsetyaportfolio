@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="fixed mx-auto w-full flex justify-between items-center p-6 box-border max-w-[700px] bg-white">
+    <div className="mx-auto w-full flex justify-between items-center p-6 box-border bg-white max-w-[1024px]">
       <img src="/logo.svg" alt="logo" width={60} />
 
       <div className='p-2 border-[3px] border-lavender-500 con rounded-md stroke-lavender-500'>
