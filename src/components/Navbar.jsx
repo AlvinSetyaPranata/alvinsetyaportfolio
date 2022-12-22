@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Navbar() {
-  return (
-    <div className="mx-auto w-full flex justify-between items-center p-6 box-border bg-white max-w-[1024px]">
-      <img src="/logo.svg" alt="logo" width={60} />
+function Navbar({ state, controller }) {
 
-      <div className='p-2 border-[3px] border-lavender-500 con rounded-md stroke-lavender-500'>
+  const svg_base_class = 'p-2 border-[2px] border-lavender-500 rounded-md stroke-lavender-500 con'
+
+  return (
+    <div className="w-full flex justify-between items-center p-6 box-border bg-white max-w-[1024px] fixed xl:left-[50%] xl:translate-x-[-50%]">
+      <img src="/logo.svg" alt="logo" width={60} />
+      <div className={state === "active" ? svg_base_class + "active" : svg_base_class } onClick={() => controller()}>
         <svg viewBox='0 -10 100 100' fill="none">
           <path d="m 20 20 h 60 " className="ham-path-1"></path>
           <path d="m 20 40 h 60 " className="ham-path-2"></path>

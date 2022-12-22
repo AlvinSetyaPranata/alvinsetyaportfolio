@@ -32,24 +32,22 @@
         transition: all 500ms ease;
     }
 
-    .con:hover {
-        border: none;
-        @apply bg-lavender-500;
-        stroke: white;
+    .con.active {
+        @apply bg-white stroke-lavender-500;
     }
 
-    .con:hover .ham-path-1 {
+    .con.active .ham-path-1 {
         transform-origin: 75% 35%;
         transform: rotate(-45deg);
     }
 
-    .con:hover .ham-path-2 {
+    .con.active .ham-path-2 {
         transform: translateX(50px);
         opacity: 0;
     }
 
 
-    .con:hover .ham-path-3 {
+    .con.active .ham-path-3 {
         transform-origin: 70% 50%;
         transform: rotate(45deg);
     }
@@ -71,4 +69,30 @@
         @apply w-full;
         max-width: 500px;
     }
+
+    /* main navigation */
+    .navigation {
+        @apply bg-lavender-600 h-screen w-full fixed;
+        transform: scale(0%);
+        transition: all 500ms ease;
+    }
+
+    .navigation.active {
+        transform: scale(100%);
+    }
+
+    /* navlink */
+
+    .navlink.active {
+        @apply bg-white text-lavender-600
+    }
+
+
+    /* projects */
+
+    .opacity-trans {
+        transition: opacity 500ms ease;
+    }
+    
+
 }
