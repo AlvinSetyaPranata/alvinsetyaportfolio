@@ -5,6 +5,7 @@ DEVELOPMENT-2:
     ✔ Make navlink and the transition @done(22-12-17 09:00)
     ✔ Make Responsive navbar make sure it's not overflowing when shrinking and growing @done(22-12-17 09:00)
     ✔ Create scrollable card @done(22-12-22 17:52)
-    ☐ Create all section in mainpage @started(22-12-16 09:32)
-    
+    ✔ Create all section in mainpage @started(22-12-16 09:32) @done(22-12-22 21:47) @lasted(6d12h15m13s)
+    ☐ Create show more button on bottom of the projects section
+    ☐ Make sure projects image rendered with selected catagories
     

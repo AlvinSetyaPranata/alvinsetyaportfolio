@@ -2,6 +2,7 @@ import React, { Suspense, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Navlink from '../../components/Navlink'
+import Footer from '../../components/Footer'
 
 function Layout() {
 
@@ -26,6 +27,7 @@ function Layout() {
           <Outlet />
         </div>
       </Suspense>
+      <Footer />
     </div>
   )
 }
