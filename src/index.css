@@ -7,9 +7,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden
-
+    /* overflow-x: hidden */
 }
+
 
 @layer base {
     svg {
@@ -72,13 +72,15 @@
 
     /* main navigation */
     .navigation {
-        @apply bg-lavender-600 h-screen w-full fixed;
-        transform: scale(0%);
+        @apply bg-lavender-600 h-screen w-full fixed z-20;
+        transform: translateY(-100%);
+        opacity: 0;
         transition: all 500ms ease;
     }
 
     .navigation.active {
-        transform: scale(100%);
+        transform: translateY(0);
+        opacity: 1;
     }
 
     /* navlink */
@@ -93,6 +95,5 @@
     .opacity-trans {
         transition: opacity 500ms ease;
     }
-    
 
 }

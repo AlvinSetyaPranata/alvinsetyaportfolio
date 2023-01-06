@@ -7,7 +7,8 @@ module.exports = {
         'lavender-700': '#634EB7',
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
-        'lavender-400': '#B1ADFB'
+        'lavender-400': '#B1ADFB',
+        'glass' : 'rgba(255, 255, 255, .45)' 
       },
       'animation' : {
         'testa' : 'test 500ms cubic-bezier(0, 0.93, 0.93, 0.93) forwards',

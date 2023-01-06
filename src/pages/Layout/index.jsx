@@ -9,7 +9,6 @@ function Layout() {
   const [active, setActive] = useState("")
 
   const activeToggle = () => {
-    console.log(active)
     if (active === "active") {
       setActive("")
     } else {
@@ -17,10 +16,11 @@ function Layout() {
     }
   }
 
+
   return (
-    <div className="min-w-screen h-max overflow-hidden">
+    <div className="min-w-screen h-max">
       <Navlink isActive={active}/>
-      <Navbar state={active} controller={activeToggle} />
+      <Navbar state={active} activeController={activeToggle}/>
       <Suspense>
         <div className="h-max max-w-[1024px] mx-auto">
 

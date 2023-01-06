@@ -1,19 +1,24 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
-function Navbar({ state, controller }) {
+function Navbar({ state, activeController }) {
 
-  const svg_base_class = 'p-2 border-[2px] border-lavender-500 rounded-md stroke-lavender-500 con'
-
+  const svg_base_class = 'p-2 xl:hidden rounded-md stroke-lavender-500 con '
+  
+  
   return (
-    <div className="w-full flex justify-between items-center p-6 box-border bg-white max-w-[1024px] sticky xl:left-[50%] xl:translate-x-[-50%] z-9">
+    <div className='w-full flex justify-between items-center py-6 px-4 xl:p-6 box-border max-w-[1200px] sticky xl:mx-auto z-30 top-0 bg-white'>
       <img src="/logo.svg" alt="logo" width={60} />
-      <div className={state === "active" ? svg_base_class + "active" : svg_base_class } onClick={() => controller()}>
-        <svg viewBox='0 -10 100 100' fill="none">
+      <div className={state === "active" ? svg_base_class + "active" : svg_base_class } onClick={() => activeController()}>
+        <svg viewBox='0 -10 100 100' className='w-[30px]' fill="none">
           <path d="m 20 20 h 60 " className="ham-path-1"></path>
           <path d="m 20 40 h 60 " className="ham-path-2"></path>
           <path d="m 20 60 h 60 " className="ham-path-3"></path>
-
         </svg>
+      </div>
+      <div className='hidden xl:flex gap-x-8 box-border'>
+          <Link to="/" className={'font-semibold text-lavender-400'}>Home</Link>
+          <Link to="/about" className={'font-semibold text-lavender-400'}>About</Link>
+          <Link to="/projects" className={'font-semibold text-lavender-400'}>Projects</Link>
       </div>
     </div>
   )
