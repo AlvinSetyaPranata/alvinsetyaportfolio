@@ -11,17 +11,15 @@ module.exports = {
         'glass' : 'rgba(255, 255, 255, .45)' 
       },
       'animation' : {
-        'testa' : 'test 500ms cubic-bezier(0, 0.93, 0.93, 0.93) forwards',
         'navIconActive' : 'nav_icon_active 500ms forwards ease-in',
         'navIconLeave' : 'nav_icon_deactive 500ms forwards ease-out',
+        'spin-slow' : 'spin 2s linear infinite',
+        'spin-slow-reverse' : 'spin_slow_reverse 2s linear infinite 500ms',
       },
       'keyframes' : {
-        'test' : {
-          'from' : {
-            'margin': '400px 0'
-          },
+        'spin_slow_reverse' : {
           'to' : {
-            'margin': '0'
+            'transform': 'rotate(-360deg)'
           }
         },
         'nav_icon_active' : {

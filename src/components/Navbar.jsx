@@ -15,10 +15,10 @@ function Navbar({ state, activeController }) {
           <path d="m 20 60 h 60 " className="ham-path-3"></path>
         </svg>
       </div>
-      <div className='hidden xl:flex gap-x-8 box-border'>
-          <Link to="/" className={'font-semibold text-lavender-400'}>Home</Link>
-          <Link to="/about" className={'font-semibold text-lavender-400'}>About</Link>
-          <Link to="/projects" className={'font-semibold text-lavender-400'}>Projects</Link>
+      <div className='hidden xl:flex gap-x-16 box-border'>
+          <Link to="/" className={'font-semibold text-lavender-400 text-lg'}>Home</Link>
+          <Link to="/about" className={'font-semibold text-lavender-400 text-lg'}>About</Link>
+          <Link to="/projects" className={'font-semibold text-lavender-400 text-lg'}>Projects</Link>
       </div>
     </div>
   )
