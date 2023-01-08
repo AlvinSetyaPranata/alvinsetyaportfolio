@@ -22,7 +22,7 @@ function Layout() {
       <Navlink isActive={active}/>
       <Navbar state={active} activeController={activeToggle}/>
       <Suspense>
-        <div className="h-max max-w-[1024px] mx-auto">
+        <div className='overflow-x-hidden'>
 
           <Outlet />
         </div>

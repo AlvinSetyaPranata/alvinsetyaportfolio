@@ -7,19 +7,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden */
 }
 
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     background-color: transparent;
-    height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: red;
-    @apply rounded-md;
-} */
+    @apply bg-lavender-600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 @layer base {
     svg {
@@ -43,7 +44,7 @@
 
     .showcase:hover::-webkit-scrollbar-thumb {
         /* transition: all 500ms ease-in; */
-        @apply bg-lavender-500;
+        @apply bg-slate-400;
     }
 
 

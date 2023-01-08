@@ -8,7 +8,6 @@ module.exports = {
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
         'lavender-400': '#B1ADFB',
-        'glass' : 'rgba(255, 255, 255, .45)' 
       },
       'animation' : {
         'navIconActive' : 'nav_icon_active 500ms forwards ease-in',

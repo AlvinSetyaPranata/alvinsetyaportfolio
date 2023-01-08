@@ -1,16 +1,23 @@
 import React from 'react'
 
-function Group({ url, desc, names }) {
+function Group({ title, images }) {
     return (
-        <div className='bg-white py-7 px-2 grid gap-y-6 rounded-md box-border max-w-[300px] md:card-md'>
-            <div className='flex flex-col items-center justify-center gap-y-4 md:card-icon-md'>
-                <img src={url} alt="react-icon" className='w-[70px] h-max md:w-[60px]' />
-                <h2 className='text-3xl font-semibold text-center'>{names}</h2>
-            </div>
-
-            <div className='px-2'>
-                <p className="font-semibold text-md text-slate-500 text-center md:text-left">{desc}
-                </p>
+        <div className='flex h-fit items-center w-full pl-4 overflow-x-hidden gap-6'>
+            <p className='rotate-180 text-xl md:text-2xl font-bold text-lavender-500' style={{ writingMode: 'vertical-lr' }}>{title}</p>
+            <div className='flex gap-x-16 w-full h-full overflow-x-auto showcase'>
+                {images.map((item) => {
+                    return (
+                        <div className='w-[350px] relative xl:w-[450px] rounded-md flex-shrink-0 '>
+                            <img src={item.url} className='w-full h-full rounded-md' alt="asd" />
+                            <div className='absolute w-full h-full bg-[rgba(0,0,0,.5)] z-20 top-0 left-0 rounded-md grid place-items-center opacity-0 hover:opacity-100 transition-all'>
+                                <div>
+                                    <p className='text-white font-semibold text-center text-xl'>{item.name}</p>
+                                    <p className='text-white text-center text-lg'>{item.date}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
