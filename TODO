@@ -11,4 +11,4 @@ DEVELOPMENT-2:
     ✔ change skills section @done(23-01-08 10:00)
     ✔ Fix footer, hero section, and contacts (spacing and sizing) @done(23-01-08 15:07)
     ☐ make a floating decoration like in chrome welcome page ( robotic theme)
-
+    ☐ make scroll based animation using framer-motion in hero section, skills section, contact section
