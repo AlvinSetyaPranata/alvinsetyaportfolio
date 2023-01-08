@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 DEVELOPMENT-2:
     ✔ Make hamburger button with animation @done(22-12-14 17:15)
     ✔ Create hero section @done(22-12-14 20:11)
@@ -13,12 +12,3 @@ DEVELOPMENT-2:
     ✔ Fix footer, hero section, and contacts (spacing and sizing) @done(23-01-08 15:07)
     ☐ make a floating decoration like in chrome welcome page ( robotic theme)
 
-=======
-Debug-1:
-    ✔ Fix first section on About page @done(22-12-01 07:19)
-    ✔ Add href into all external links @done(22-12-03 16:14)
-    ☐ Make a animated hamburger button
-    ☐ Fix navlink state to handle active state or not
-    ☐ Fix navlink style on deactive and active
-    ☐ Make it responsives
->>>>>>> master

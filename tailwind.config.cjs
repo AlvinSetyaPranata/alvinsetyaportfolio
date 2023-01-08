@@ -6,7 +6,6 @@ module.exports = {
       'colors': {
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
-<<<<<<< HEAD
         'lavender-400': '#B1ADFB',
       },
       'animation' : {
@@ -51,9 +50,6 @@ module.exports = {
           }
         }
  
-=======
-        'lavender-400': '#B1ADFB'
->>>>>>> master
       }
     },
   },
