@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       'colors': {
-        'lavender-700': '#634EB7',
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
+<<<<<<< HEAD
         'lavender-400': '#B1ADFB',
       },
       'animation' : {
@@ -51,11 +51,11 @@ module.exports = {
           }
         }
  
+=======
+        'lavender-400': '#B1ADFB'
+>>>>>>> master
       }
     },
   },
   plugins: [],
 }
-
-
-// cubic-bezier(0,-0.21, 1, 0.83)

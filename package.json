@@ -1,17 +1,15 @@
 {
   "name": "portofolio",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alvinsetya.my.id",
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production && vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "purge": "yarn postcss src/index.css -o index.css"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -20,6 +18,8 @@
     "framer-motion": "^7.6.15",
     "gh-pages": "^4.0.0",
     "hmr": "^0.1.0",
+=======
+>>>>>>> master
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"
@@ -30,7 +30,6 @@
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
-    "postcss-cli": "^10.0.0",
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.2"
   },
