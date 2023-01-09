@@ -10,5 +10,9 @@ DEVELOPMENT-2:
     ✔ Create show more button on bottom of the projects section @done(23-01-06 17:06)
     ✔ change skills section @done(23-01-08 10:00)
     ✔ Fix footer, hero section, and contacts (spacing and sizing) @done(23-01-08 15:07)
+    ✔ create about page @done(23-01-09 12:39)
+    ☐ change projects section from displaying all projects into the latest one projects in one catagory
     ☐ make a floating decoration like in chrome welcome page ( robotic theme)
+    ☐ add page icon
     ☐ make scroll based animation using framer-motion in hero section, skills section, contact section
+    ☐ create projects page (more details)

@@ -26,14 +26,14 @@ function Footer() {
                     <div className='flex justify-center items-center gap-x-[20px] md:gap-x-[40px] mt-[10px] w-full'>
                         <div className='flex flex-col items-center gap-y-[5px] justify-evenly'>
                             <img src="/tailwind.png" className='w-[35px] md:w-[40px]' alt="logo" />
-                            <p className='font-bold text-sm md:text-lg'>Tailwind</p>
+                            <p className='font-semibold text-sm md:text-lg'>Tailwind</p>
 
                         </div>
 
 
                         <div className='flex flex-col items-center gap-y-[5px]'>
                             <img src="/reactjs.png" alt="logo" className='w-[35px] md:w-[40px] flex-shrink-0 flex-grow-0' />
-                            <p className='font-bold text-sm md:text-lg '>React JS</p>
+                            <p className='font-semibold text-sm md:text-lg '>React JS</p>
                         </div>
                     </div>
                     <div>
