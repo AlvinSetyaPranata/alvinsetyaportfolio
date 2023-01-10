@@ -70,7 +70,7 @@ function Home() {
       <section className='relative z-10 py-12 h-fit w-full section-full bg-lavender-600' id="contact-me">
         <div className='max-w-[1200px] mx-auto justify-center px-8'>
           <h2 className='text-3xl md:text-5xl font-bold text-white mb-4'>Interested to hire me?</h2>
-          <p className='text-white text-xl font-semibold mb-12 md:mb-16 text-left'>Contatct me on</p>
+          <p className='text-white text-xl font-semibold mb-12 md:mb-16 text-left'>Contact me on</p>
           <div className='flex items-center gap-4 md:gap-6'>
             <CircleLink linkTo="mailto:comand.alvin@gmail.com?subject=We want to hire you&body=messege" url="/gmail.png" />
             <CircleLink linkTo="https://wa.me/6285334277450" url="/wa.png" />

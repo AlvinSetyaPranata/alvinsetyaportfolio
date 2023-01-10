@@ -10,7 +10,7 @@ function Navlink({ isActive }) {
     }
 
     return (
-        <div className={isActive === "active" ? "navigation active" : "navigation"}>
+        <div className={`md:hidden ${isActive === "active" ? "navigation active" : "navigation"}`}>
             <div className='relative top-[50%] w-full grid place-items-center gap-y-[30px]'>
                 <Link to="/" onClick={() => handleClick()} className={base_class}>Home</Link>
                 <Link to="/about" className={base_class} onClick={() => handleClick()}>About</Link>

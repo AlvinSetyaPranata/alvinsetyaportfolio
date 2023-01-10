@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
 
     return (
-        <div className='w-full flex justify-between items-center bg-white py-8 px-6 md:py-16'>
+        <div className='w-full flex justify-between items-center bg-white py-6 px-6 md:py-12'>
             {/* <h2 className='text-lg md:text-2xl font-bold mb-6'>Created and Designed by Alvinsetya</h2>
             <div className="flex w-[200px] justify-evenly items-center">
                 <a href=""><img src="/ig.png" alt="ig-icon" className={icon_class}/></a>
