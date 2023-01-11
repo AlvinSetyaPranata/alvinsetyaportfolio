@@ -56,8 +56,8 @@ function About() {
 
                     <h2 className='text-3xl font-bold'>My latest projects</h2>
                     <div className='grid gap-y-32'>
-                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" />
-                        <CardSkills url="/weebstore.png" name="Weebstore" desc="A right place for otaku that have anything they needed" reversed={true} />
+                        <CardSkills url="/weebstore.png" name="Weebstore" desc="A right place for otaku that have anything they needed" />
+                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" reversed={true}/>
                     </div>
                 </section>
 

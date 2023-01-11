@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import Layout from '../pages/Layout'
 
 const Home = lazy(() => import("../pages/Home"))
@@ -8,7 +8,7 @@ const Projects = lazy(() => import("../pages/Projects"))
 
 function Routers() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ function Routers() {
             <Route path="/projects" element={<Projects />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CircleLink from '../../components/CircleLink'
 import Decoration from '../../components/Decoration'
+import Quotes from '../../components/Quotes'
 
 
 function Home() {
@@ -35,9 +36,24 @@ function Home() {
       },
     },
 
-    'onHover' : {
+    'onHover': {
       scale: 1.12
     }
+  }
+
+  const skillVariants = {
+    'init': {
+      scale: 0
+    },
+    'visible': {
+      scale: 1,
+      transition: {
+        staggerChildren: 0.3,
+        ease: 'easeIn',
+        duration: 0.5,
+        delayChildren: 0.5
+      }
+    },
   }
 
   return (
@@ -72,11 +88,11 @@ function Home() {
               >
                 <Link to="/about">Introduce me</Link>
               </motion.a>
-              <motion.a 
-              className='bg-white text-lavender-600 border-2 border-lavender-600 rounded-md px-[150px] py-[12px] font-semibold text-md  outline-none hover:text-white hover:bg-lavender-600 text-center' 
-              href="#contact-me"
-              variants={heroVariants}
-              whileHover="onHover"
+              <motion.a
+                className='bg-white text-lavender-600 border-2 border-lavender-600 rounded-md px-[150px] py-[12px] font-semibold text-md  outline-none hover:text-white hover:bg-lavender-600 text-center'
+                href="#contact-me"
+                variants={heroVariants}
+                whileHover="onHover"
               >Let's connect</motion.a>
 
             </div>
@@ -86,36 +102,56 @@ function Home() {
 
         {/* roles section */}
         <section className={`flex items-center flex-col py-16 ${section_baseclass}`}>
-          <h2 className='text-3xl md:text-5xl font-bold text-lavender-600 text-center'>"We must use time as a tool, not as a couch"</h2>
-          <span className='text-xl  md:text-xl font-semibold text-slate-400'>John F. Kennedy</span>
+          {/* <h2 className='text-3xl md:text-5xl font-bold text-lavender-600 text-center'>"We must use time as a tool, not as a couch"</h2>
+          <span className='text-xl  md:text-xl font-semibold text-slate-400'>John F. Kennedy</span> */}
+
+          <Quotes head='"We must use time as a tool, not as a couch"' body="John F. Kennedy" />
+
 
           <div className='w-full mt-24 px-6'>
             <h2 className='font-bold text-3xl'>My fields are at</h2>
           </div>
 
-          <div className='grid md:grid-cols-2 mt-24 gap-24'>
+          <motion.div
+            className='grid md:grid-cols-2 mt-24 gap-24'
+            variants={skillVariants}
+            initial="init"
+            whileInView="visible"
+          >
 
-            <div className='px-4 py-2 grid place-items-center gap-y-12'>
+            <motion.div
+              className='px-4 py-2 grid place-items-center gap-y-12'
+              variants={skillVariants}
+            >
               <img src="/ui-ux.png" alt="logo" className='w-[300px]' />
               <h3 className='font-bold text-2xl'>UI/UX Designs</h3>
-            </div>
+            </motion.div>
 
-            <div className='px-4 py-2 grid place-items-center gap-y-12'>
+            <motion.div
+              className='px-4 py-2 grid place-items-center gap-y-12'
+              variants={skillVariants}
+            >
               <img src="/mobile-dev.png" alt="logo" className='w-[250px]' />
               <h3 className='font-bold text-2xl'>Mobile Development</h3>
-            </div>
+            </motion.div>
 
-            <div className='px-4 py-2 grid place-items-center gap-y-12'>
+            <motion.div 
+            className='px-4 py-2 grid place-items-center gap-y-12'
+            variants={skillVariants}
+            >
               <img src="/desktop-dev.png" alt="logo" className='w-[400px]' />
               <h3 className='font-bold text-2xl'>Desktop Development</h3>
-            </div>
+            </motion.div>
 
-            <div className='px-4 py-2 grid place-items-center gap-y-12'>
+            <motion.div 
+            className='px-4 py-2 grid place-items-center gap-y-12'
+            variants={skillVariants}
+            >
               <img src="/backend-dev.png" alt="logo" className='w-[190px]' />
               <h3 className='font-bold text-2xl'>Backend Development</h3>
-            </div>
+            </motion.div>
 
-          </div>
+          </motion.div>
         </section>
       </div>
 
