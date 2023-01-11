@@ -5,7 +5,7 @@ import Group from '../../components/Group'
 
 
 function About() {
-    const section_baseclass = " h-max py-32 box-border min-w-full"
+    const section_baseclass = " h-max py-24 box-border min-w-full"
 
 
     return (
@@ -38,12 +38,13 @@ function About() {
                         <span className='text-slate-400 text-lg  md:text-xl font-semibold'>I'm expirienced with technologies such as</span>
                     </div>
 
-                    <div className='grid grid-cols-2 gap-8 mt-16 place-items-center'>
-                        <Group name="React JS" image="/react.png" desc="A popular framework that can build reactive website that can be splited into components, which makes easier in development" width={40} height={35}/>
-                        <Group name="Django" image="/django-logo.png" desc="A backend framework writen in python, this frameworks is easy to make an application scallable" width={60} height={60}/>
-                        <Group name="Figma" image="/figma.png" desc="To make UI designs i used figma as tool to make website prototype, before i started to coded" width={40} height={40}/>
-                        <Group name="Postgresql" image="/postgresql.png" desc="I use this database system to integrate with my backend, compared to mariaDB postgresql is more secure" width={40} height={40}/>
-                        <Group name="Framer Motion" image="/framer.png" desc="Framework like a GSAP that can handle animation, but it's make code cleaner in react js and build animation from scratch" width={40} height={40}/>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 place-items-center'>
+                        <Group name="React JS" image="/react.png" desc="Understand how to make code more cleaner, how to create custom hooks, and how to use built-in hooks according to a speciif case" />
+                        <Group name="Django" image="/django-logo.png" desc="django is backend framework written in python, that often i used to make an API and backend authentication using JWT's token" />
+                        <Group name="Figma" image="/figma.png" desc="pretty much understand how to make an ui/ux that can implemented by the frontend engineer without having a trouble" />
+                        <Group name="Postgresql" image="/postgresql.png" desc="I use this database system to integrate with my backend, because compared to other systems postgresql is more secure and open source projects" />
+                        <Group name="Framer Motion" image="/framer.png" desc="Framework like a GSAP that can handle animation, but it's easy to work with reactjs and make code more clean. also can build animation from scratch" />
+                        <Group name="Tailwind" image="/tailwind.png" desc="Most of my web projects use this framework because it has an abbility to style directly in classnames without having to write in css file, this can save my production time" />
                     </div>
                 </section>
 

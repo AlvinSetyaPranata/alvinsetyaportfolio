@@ -22,19 +22,13 @@ function Footer() {
                 </div>
 
                 <div className='grid place-items-center'>
-                    <h2 className='font-semibold text-base text-center whitespace-nowrap md:text-2xl'>This website is built on</h2>
-                    <div className='flex justify-center items-center gap-x-[20px] md:gap-x-[40px] mt-[10px] w-full'>
-                        <div className='flex flex-col items-center gap-y-[5px] justify-evenly'>
-                            <img src="/tailwind.png" className='w-[35px] md:w-[40px]' alt="logo" />
-                            <p className='font-semibold text-sm md:text-lg'>Tailwind</p>
+                    <h2 className='font-semibold text-base text-center whitespace-nowrap md:text-xl'>This website is built on</h2>
+                    <div className='flex justify-center items-center gap-x-[20px] md:gap-x-[40px] mt-[20px] w-full'>
+                        <img src="/tailwind.png" className='w-[30px]' alt="logo" />
 
-                        </div>
+                        <img src="/reactjs.png" alt="logo" className='w-[30px] flex-shrink-0 flex-grow-0' />
 
-
-                        <div className='flex flex-col items-center gap-y-[5px]'>
-                            <img src="/reactjs.png" alt="logo" className='w-[35px] md:w-[40px] flex-shrink-0 flex-grow-0' />
-                            <p className='font-semibold text-sm md:text-lg '>React JS</p>
-                        </div>
+                        <img src="/framer.png" alt="logo" className='w-[25px] flex-shrink-0 flex-grow-0' />
                     </div>
                     <div>
 

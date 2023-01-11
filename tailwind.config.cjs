@@ -3,7 +3,10 @@ module.exports = {
   content: ["index.html", "./src/**/*.jsx", "./src/components/*.jsx", "./src/pages/**/*.jsx"],
   theme: {
     extend: {
-      'colors': {
+      fontFamily: {
+        'headings' : ['Satisfy', 'cursive']
+      },
+      colors: {
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
         'lavender-400': '#B1ADFB',
