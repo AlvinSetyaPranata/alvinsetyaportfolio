@@ -24,11 +24,26 @@ function About() {
                 <section className={'flex flex-col gap-y-[80px] px-4 ' + section_baseclass}>
                     <div className='flex flex-col gap-y-[20px]'>
                         <h3 className='font-bold text-3xl md:text-4xl'>Let me introduce myself</h3>
-                        <p className='font-semibold text-lg'>My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in grade 1 of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</p>
+                        <p className='font-semibold text-lg'>My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</p>
                     </div>
                     <div className='flex flex-col gap-y-[20px]'>
                         <h3 className='font-bold text-3xl md:text-4xl'>My Expirience</h3>
                         <p className='font-semibold text-lg md:text-xl'>I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</p>
+                    </div>
+                </section>
+
+                <section className={section_baseclass}>
+                    <div className='text-center'>
+                        <h2 className='text-4xl md:text-6xl font-bold text-lavender-600'>"Your skills is your both hand"</h2>
+                        <span className='text-slate-400 text-lg  md:text-xl font-semibold'>I'm expirienced with technologies such as</span>
+                    </div>
+
+                    <div className='grid grid-cols-2 gap-8 mt-16 place-items-center'>
+                        <Group name="React JS" image="/react.png" desc="A popular framework that can build reactive website that can be splited into components, which makes easier in development" width={40} height={35}/>
+                        <Group name="Django" image="/django-logo.png" desc="A backend framework writen in python, this frameworks is easy to make an application scallable" width={60} height={60}/>
+                        <Group name="Figma" image="/figma.png" desc="To make UI designs i used figma as tool to make website prototype, before i started to coded" width={40} height={40}/>
+                        <Group name="Postgresql" image="/postgresql.png" desc="I use this database system to integrate with my backend, compared to mariaDB postgresql is more secure" width={40} height={40}/>
+                        <Group name="Framer Motion" image="/framer.png" desc="Framework like a GSAP that can handle animation, but it's make code cleaner in react js and build animation from scratch" width={40} height={40}/>
                     </div>
                 </section>
 

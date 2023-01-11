@@ -14,5 +14,5 @@ DEVELOPMENT-2:
     ✔ change projects section from displaying all projects into the latest one projects in one catagory @done(23-01-10 11:29)
     ✔ create projects page (more details) @done(23-01-10 11:29)
     ✔ add page icon @done(23-01-10 11:29)
-    ☐ make a floating decoration like in chrome welcome page ( robotic theme)
+    ☐ make a floating decoration like in chrome welcome page ( element theme)
     ☐ make scroll based animation using framer-motion in hero section, skills section, contact section
