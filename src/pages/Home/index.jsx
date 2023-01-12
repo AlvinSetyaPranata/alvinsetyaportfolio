@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import CircleLink from '../../components/CircleLink'
 import Decoration from '../../components/Decoration'
@@ -9,6 +10,7 @@ import Quotes from '../../components/Quotes'
 function Home() {
 
   const section_baseclass = " min-h-screen box-border min-w-full"
+  const contact = useRef()
 
   const heroVariants = {
     'hideHeading': {
@@ -41,6 +43,15 @@ function Home() {
     }
   }
 
+  const containersVariants = {
+    'init': {},
+    'visible': {
+      transition: {
+        staggerChildren: 0.3,
+      }
+    }
+  }
+
   const skillVariants = {
     'init': {
       scale: 0
@@ -48,12 +59,24 @@ function Home() {
     'visible': {
       scale: 1,
       transition: {
-        staggerChildren: 0.3,
         ease: 'easeIn',
         duration: 0.5,
-        delayChildren: 0.5
       }
     },
+  }
+
+  const contactsVariants = {
+    'init' : {
+      rotate: '90deg'
+    },
+
+    'visible' : {
+      rotate: '0deg',
+      transition: {
+        type: 'tween',
+        duration: 0.2
+    }
+    }
   }
 
   return (
@@ -81,19 +104,19 @@ function Home() {
             >Hi i'm Alvin Setya, a young blood who like to develop
               Mobile, Web, and Desktop App</motion.h2>
             <div className='my-8 flex flex-col md:flex-row gap-8 justify-center py-4'>
-              <motion.a
+              <motion.button
                 className='bg-lavender-600 text-white rounded-md px-[150px] py-[12px] font-semibold text-md  border-2 border-lavender-600 hover:text-lavender-600 outline-none hover:bg-white text-center'
                 variants={heroVariants}
                 whileHover="onHover"
               >
                 <Link to="/about">Introduce me</Link>
-              </motion.a>
-              <motion.a
+              </motion.button>
+              <motion.button
                 className='bg-white text-lavender-600 border-2 border-lavender-600 rounded-md px-[150px] py-[12px] font-semibold text-md  outline-none hover:text-white hover:bg-lavender-600 text-center'
-                href="#contact-me"
                 variants={heroVariants}
                 whileHover="onHover"
-              >Let's connect</motion.a>
+                onClick={() => contact.current.scrollIntoView({behavior: 'smooth'})}
+              >Let's connect</motion.button>
 
             </div>
           </div>
@@ -102,9 +125,6 @@ function Home() {
 
         {/* roles section */}
         <section className={`flex items-center flex-col py-16 ${section_baseclass}`}>
-          {/* <h2 className='text-3xl md:text-5xl font-bold text-lavender-600 text-center'>"We must use time as a tool, not as a couch"</h2>
-          <span className='text-xl  md:text-xl font-semibold text-slate-400'>John F. Kennedy</span> */}
-
           <Quotes head='"We must use time as a tool, not as a couch"' body="John F. Kennedy" />
 
 
@@ -114,7 +134,7 @@ function Home() {
 
           <motion.div
             className='grid md:grid-cols-2 mt-24 gap-24'
-            variants={skillVariants}
+            variants={containersVariants}
             initial="init"
             whileInView="visible"
           >
@@ -135,17 +155,17 @@ function Home() {
               <h3 className='font-bold text-2xl'>Mobile Development</h3>
             </motion.div>
 
-            <motion.div 
-            className='px-4 py-2 grid place-items-center gap-y-12'
-            variants={skillVariants}
+            <motion.div
+              className='px-4 py-2 grid place-items-center gap-y-12'
+              variants={skillVariants}
             >
               <img src="/desktop-dev.png" alt="logo" className='w-[400px]' />
               <h3 className='font-bold text-2xl'>Desktop Development</h3>
             </motion.div>
 
-            <motion.div 
-            className='px-4 py-2 grid place-items-center gap-y-12'
-            variants={skillVariants}
+            <motion.div
+              className='px-4 py-2 grid place-items-center gap-y-12'
+              variants={skillVariants}
             >
               <img src="/backend-dev.png" alt="logo" className='w-[190px]' />
               <h3 className='font-bold text-2xl'>Backend Development</h3>
@@ -155,15 +175,26 @@ function Home() {
         </section>
       </div>
 
-      <section className='relative z-10 py-12 h-fit w-full section-full bg-lavender-600' id="contact-me">
-        <div className='max-w-[1200px] mx-auto justify-center px-8'>
-          <h2 className='text-3xl md:text-5xl font-bold text-white mb-4'>Interested to hire me?</h2>
-          <p className='text-white text-xl font-semibold mb-12 md:mb-16 text-left'>Contact me on</p>
+      <section className='relative z-10 py-12 h-fit w-full section-full bg-lavender-600 overflow-hidden' ref={contact}>
+        <motion.div 
+        className='max-w-[1200px] mx-auto justify-center px-8'
+        variants={containersVariants}
+        initial="init"
+        whileInView="visible"
+        >
+          <motion.h2 
+          className='text-3xl md:text-5xl font-bold text-white mb-4'
+          variants={contactsVariants}
+          >Interested to hire me?</motion.h2>
+          <motion.p 
+          className='text-white text-xl font-semibold mb-12 md:mb-16 text-left'
+          whileInView={{scale: 1, transition: {type: "tween", duration: 0.4}}}
+          initial={{scale: 0}}>Contact me on</motion.p>
           <div className='flex items-center gap-4 md:gap-6'>
             <CircleLink linkTo="mailto:comand.alvin@gmail.com?subject=We want to hire you&body=messege" url="/gmail.png" />
             <CircleLink linkTo="https://wa.me/6285334277450" url="/wa.png" />
           </div>
-        </div>
+        </motion.div>
 
         <button className='right-[10%] md:right-[25%] top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-6 bg-white absolute'>My Projects</button>
       </section>
