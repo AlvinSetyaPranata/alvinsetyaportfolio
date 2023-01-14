@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 
-function CardSkills({ url, name, desc, reversed = false }) {
+function CardSkills({ url, name, desc, reversed = false, delay = 0}) {
     const variants = {
         init: {
             x: -200,
@@ -14,7 +14,8 @@ function CardSkills({ url, name, desc, reversed = false }) {
             opacity: 1,
             transition: {
                 type: "spring",
-                duration: 0.8
+                duration: 0.8,
+                delay: delay
             }
         }
     }
@@ -30,8 +31,8 @@ function CardSkills({ url, name, desc, reversed = false }) {
 
             <div className={`text-left ${reversed ? 'text-right' : ''}`}>
                 <h3 className='text-3xl md:text-3xl font-bold'>{name}</h3>
-                <p className='text-lg font-semibold'>{desc}</p>
-                <button className='mt-12 px-6 py-4 bg-lavender-600 rounded-md text-white font-semibold'>View projects</button>
+                <p className='text-lg text-slate-400 font-semibold'>{desc}</p>
+                <button className='mt-12  px-6 py-4 bg-lavender-600 rounded-md text-white font-semibold'>View projects</button>
             </div>
         </motion.div>
     )

@@ -19,11 +19,12 @@ function Layout() {
 
   return (
     <div className="min-w-screen h-max">
-      <Navlink isActive={active} toogle={activeToggle}/>
-      <Navbar state={active} activeController={activeToggle}/>
+      <Navlink isActive={active} Activetoogle={activeToggle} />
+      <Navbar state={active} activeController={activeToggle} />
       <Suspense>
-        <div className='overflow-x-hidden'>
-
+        <div
+          className='overflow-x-hidden'
+        >
           <Outlet />
         </div>
       </Suspense>

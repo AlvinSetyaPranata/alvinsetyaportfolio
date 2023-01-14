@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CardSkills from '../../components/CardSkills'
 import CircleLink from '../../components/CircleLink'
 import Group from '../../components/Group'
@@ -7,7 +8,7 @@ import Quotes from '../../components/Quotes'
 
 
 function About() {
-    const section_baseclass = " h-max py-24 box-border min-w-full"
+    const section_baseclass = " h-max py-16  md:py-24 box-border min-w-full"
 
     const containersVariants = {
         'init': {},
@@ -32,18 +33,46 @@ function About() {
         }
     }
 
+    const parentVariants = {
+        'initial': {
+            opacity: 0
+        },
+
+        'visible': {
+            opacity: [0, 0.5, 0.75, 1],
+            transition: {
+                ease: "easeIn",
+                duration: 0.5,
+            }
+        },
+
+        'exit' : { 
+            x: [0, -500], 
+            opacity: 0, 
+            transition: { 
+                ease: "easeOut", 
+                duration: 0.5,
+            }
+        }
+    }
+
 
     return (
-        <>
+        <motion.div
+        variants={parentVariants}
+        initial='init'
+        animate='visible'
+        exit='exit'
+        >
             <div className='container h-max box-border max-w-[1200px] grid w-full mx-auto'>
                 <section className={'pt-24 ' + section_baseclass}>
                     <div className='mx-auto grid place-items-center w-full gap-y-[60px]'>
-                        <div className='w-[500px]'>
+                        <div className='w-[300px] md:w-[500px]'>
                             <motion.img
                                 src="photo.jpg"
                                 alt="photo"
-                                initial={{ width: 0, opacity: 0 }}
-                                whileInView={{ width: "100%", opacity: 1, transition: { type: "spring", duration: 1 } }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: [0, 0.75, 1], transition: { type: "spring", duration: 1 } }}
 
                             />
                         </div>
@@ -52,22 +81,34 @@ function About() {
                     </div>
                 </section>
 
-                <section className={'flex flex-col gap-y-[80px] px-4 ' + section_baseclass}>
+                <section className={`${section_baseclass} flex flex-col gap-y-[80px] px-4 py-32`}>
                     <div className='flex flex-col gap-y-[20px]'>
-                        <h3 className='font-bold text-3xl md:text-4xl'>Let me introduce myself</h3>
-                        <p className='font-semibold text-lg'>My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</p>
+                        <motion.h3 
+                        className='font-bold text-3xl md:text-4xl'
+                        initial={{x: -100, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1}}}
+                        >Let me introduce myself</motion.h3>
+                        <motion.p 
+                        className='font-semibold text-lg text-slate-400'
+                        initial={{y: 100, opacity: 0}}
+                        whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5}}}
+                        >My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</motion.p>
                     </div>
                     <div className='flex flex-col gap-y-[20px]'>
-                        <h3 className='font-bold text-3xl md:text-4xl'>My Expirience</h3>
-                        <p className='font-semibold text-lg md:text-xl'>I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</p>
+                        <motion.h3 
+                        className='font-bold text-3xl md:text-4xl'
+                        initial={{x: -100, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1, delay: 0.3}}}
+                        >My Expirience</motion.h3>
+                        <motion.p 
+                        className='font-semibold text-lg md:text-xl text-slate-400'
+                        initial={{y: 100, opacity: 0}}
+                        whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5, delay: 0.3}}}>
+                        I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</motion.p>
                     </div>
                 </section>
 
                 <section className={section_baseclass}>
-                    {/* <div className='text-center'>
-                        <h2 className='text-4xl md:text-6xl font-bold text-lavender-600'>"Your skills is your both hand"</h2>
-                        <span className='text-slate-400 text-lg  md:text-xl font-semibold'>I'm expirienced with technologies such as</span>
-                    </div> */}
 
                     <Quotes head='"Your skills is your both hand"' body="I'm expirienced with technologies such as" />
 
@@ -77,15 +118,11 @@ function About() {
                         <Group name="Figma" image="/figma.png" desc="Pretty much understand how to wireframing and make an ui/ux that can easily implemented by the frontend engineer without having a trouble" />
                         <Group name="Postgresql" image="/postgresql.png" desc="I use this database system to integrate with my backend, because compared to other systems postgresql is more secure and open source projects" />
                         <Group name="Framer Motion" image="/framer.png" desc="Like a GSAP which can handle animation, but it's easy to work within reactjs and make code more clean. also it can create an animation from scratch" />
-                        <Group name="Tailwind" image="/tailwind.png" desc="Most of my web projects use this framework because it has an ability to style directly in classnames without having to write in seperate css file. this awesome because it save my production time" />
+                        <Group name="Tailwindcss" image="/tailwind.svg" desc="Most of my web projects use this framework because it has an ability to style directly in classnames without having to write in seperate css file. this awesome because it save my production time" />
                     </motion.div>
                 </section>
 
                 <section className={`grid gap-y-16 px-4 ${section_baseclass}`}>
-                    {/* <div className='text-center'>
-                        <h2 className='text-4xl md:text-6xl font-bold text-lavender-600'>"Your project is your plant you grow"</h2>
-                        <span className='text-slate-400 text-lg  md:text-xl font-semibold'>Latest projects that i've made</span>
-                    </div> */}
 
                     <Quotes head='"Your project is your plant you grow"' body="Latest projects that i've made" />
 
@@ -97,31 +134,30 @@ function About() {
                         whileInView="visible"
                     >
                         <CardSkills url="/weebstore.png" name="Weebstore" desc="A right place for otaku that have anything they needed" />
-                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" reversed={true} />
+                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" reversed={true} delay={0.4}/>
                     </motion.div>
                 </section>
 
-                <section className={`px-6 ${section_baseclass}`}>
-                    <div className='text-center'>
-                        <h2 className='text-4xl md:text-6xl font-bold text-lavender-600'>"Take a breath for a while"</h2>
-                        <span className='text-slate-400 text-lg  md:text-xl font-semibold'>I also do some other activities in my spare time</span>
-                    </div>
+                <section className={`px-2 md:px-6 ${section_baseclass}`}>
+
+                    <Quotes head='"Take a breath for a while"' body='I also do some other activities in my spare time' />
+
 
                     <div className='grid mt-16 justify-center gap-y-16'>
-                        <div className='flex justify-center items-center gap-x-12 md:gap-x-24'>
-                            <div className='max-w-[50%]'>
-                                <h3 className='text-2xl md:text-3xl font-bold'>Watching animes</h3>
-                                <p className='text-lg md:text-xl font-semibold'>I like watching an animes because sometimes it gives me some motivation and new idea</p>
+                        <div className='flex justify-center items-center gap-x-16 md:gap-x-24'>
+                            <div className='md:max-w-[50%]'>
+                                <h3 className='text-xl md:text-3xl font-bold'>Watching animes</h3>
+                                <p className='text-base md:text-xl font-semibold mt-4 text-slate-400'>I like watching an animes because sometimes it gives me some motivation and new idea</p>
                             </div>
-                            <img src="/anime.jpg" alt="img" width="200px" />
+                            <img src="/anime.jpg" alt="img" className='w-[100px] md:w-[200px]' />
                         </div>
 
-                        <div className='flex justify-center items-center gap-x-24'>
+                        <div className='flex justify-center items-center ga-x-16 md:gap-x-24'>
                             <div className='md:max-w-[50%]'>
-                                <h3 className='text-2xl md:text-3xl font-bold'>Playing games</h3>
-                                <p className='text-lg md:text-xl font-semibold'>Playing game help me to reduce my stress level</p>
+                                <h3 className='text-xl md:text-3xl font-bold'>Playing games</h3>
+                                <p className='text-base text-slate-400 md:text-xl font-semibold'>Playing game help me to reduce my stress level</p>
                             </div>
-                            <img src="/game.jpg" alt="img" className='w-[200px] md:w-[350px]' />
+                            <img src="/game.jpg" alt="img" className='w-[120px] md:w-[350px]' />
                         </div>
                     </div>
                 </section>
@@ -136,7 +172,7 @@ function About() {
                     whileInView="visible"
                 >
                     <motion.h2
-                        className='text-3xl md:text-5xl font-bold text-white mb-4'
+                        className='text-2xl md:text-5xl font-bold text-white mb-4'
                         variants={contactsVariants}
                     >Interested to collaborate me?</motion.h2>
                     <motion.p
@@ -150,9 +186,11 @@ function About() {
                     </div>
                 </motion.div>
 
-                <button className='right-[10%] md:right-[25%] top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-6 bg-white absolute'>My Projects</button>
+                <button className='right-[10%] md:right-[25%] top-[50%] md:top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-4 md:px-6 bg-white absolute rounded-md'>
+                    <Link to="/projects">My Projects</Link>
+                </button>
             </section>
-        </>
+        </motion.div>
     )
 }
 

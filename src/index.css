@@ -8,6 +8,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    /* debug */
+
+    /* background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important; */
+
 }
 
 
@@ -33,6 +40,8 @@ html {
         stroke-width: 15px;
         stroke-linecap: round;
     }
+
+    /* decorations */
 
     .img-scale-wrapper:hover img {
         @apply animate-scale;

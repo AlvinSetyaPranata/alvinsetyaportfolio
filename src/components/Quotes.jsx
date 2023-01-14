@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 
-function Quotes({ head, body }) {
+function Quotes({ head, body, delay=0 }) {
 
     const quotesVariants = {
         "hide": {
@@ -14,7 +14,8 @@ function Quotes({ head, body }) {
             y: 0,
             transition: {
                 type: "spring",
-                duration: 1
+                duration: 1,
+                delay: delay
             }
         },
     }
@@ -22,12 +23,12 @@ function Quotes({ head, body }) {
     return (
         <div className='gap-y-[10px] grid place-items-center'>
             <motion.h2
-                className='text-4xl md:text-6xl font-bold text-lavender-600 text-center md:whitespace-nowrap'
+                className='text-3xl md:text-6xl font-bold text-lavender-600 text-center md:whitespace-nowrap'
                 variants={quotesVariants}
                 initial="hide"
                 whileInView="visible"
             >{head}</motion.h2>
-            <p className='text-lg  md:text-xl font-semibold text-slate-400'>{body}</p>
+            <p className='text-base text-center md:text-xl font-semibold text-slate-400'>{body}</p>
         </div>)
 }
 

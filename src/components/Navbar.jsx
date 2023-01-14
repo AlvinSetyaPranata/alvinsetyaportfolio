@@ -4,7 +4,8 @@ function Navbar({ state, activeController }) {
 
   const svg_base_class = 'p-2 xl:hidden rounded-md stroke-lavender-500 con '
   
-  
+  const borderLink =  'before:absolute before:w-0 before:border-b-lavender-600 before:h-full before:border-b-4 before:py-[13px] before:hover:w-full rounded-md before:hover:transition-all before:hover:duration-300 before:hover:ease-in ease-in'
+
   return (
     <div className='w-full flex justify-between items-center py-6 px-4 xl:p-6 box-border max-w-[1200px] sticky xl:mx-auto z-30 top-0 bg-white'>
       <img src="/logo.png" alt="logo" width={60} />
@@ -16,9 +17,9 @@ function Navbar({ state, activeController }) {
         </svg>
       </div>
       <div className='hidden xl:flex gap-x-16 box-border'>
-          <Link to="/" className={'font-semibold text-lavender-400 text-lg'}>Home</Link>
-          <Link to="/about" className={'font-semibold text-lavender-400 text-lg'}>About</Link>
-          <Link to="/projects" className={'font-semibold text-lavender-400 text-lg'}>Projects</Link>
+          <Link to="/" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>Home</Link>
+          <Link to="/about" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>About</Link>
+          <Link to="/projects" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>Projects</Link>
       </div>
     </div>
   )

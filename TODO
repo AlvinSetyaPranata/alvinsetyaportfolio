@@ -14,5 +14,8 @@ DEVELOPMENT-2:
     ✔ change projects section from displaying all projects into the latest one projects in one catagory @done(23-01-10 11:29)
     ✔ create projects page (more details) @done(23-01-10 11:29)
     ✔ add page icon @done(23-01-10 11:29)
-    ☐ make scroll based animation using framer-motion in hero section, skills section, contact section @started(23-01-12 04:02)
+    ✔ make scroll based animation using framer-motion in hero section, skills section, contact section @started(23-01-12 04:02) @done(23-01-13 14:36) @lasted(1d10h34m17s)
     ☐ make a floating decoration like in chrome welcome page ( element theme)
+    ☐ Preview on mobile devices
+    ☐ Check on build production
+    ☐ Deploy to github
