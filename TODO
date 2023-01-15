@@ -4,7 +4,7 @@ DEVELOPMENT-2:
     ✔ Create state that can pass to the navlink @done(22-12-17 08:59)
     ✔ Make navlink and the transition @done(22-12-17 09:00)
     ✔ Make Responsive navbar make sure it's not overflowing when shrinking and growing @done(22-12-17 09:00)
-    ✔ Create scrollable card @done(22-12-22 17:52)
+    ✘ Create scrollable card @cancelled(23-01-15 05:05)
     ✔ Create all section in mainpage @started(22-12-16 09:32) @done(22-12-22 21:47) @lasted(6d12h15m13s)
     ✔ Make sure projects image rendered with selected catagories @done(22-12-23 12:36)
     ✘ Create show more button on bottom of the projects section @cancelled(23-01-10 11:30)

@@ -30,9 +30,9 @@ function CardSkills({ url, name, desc, reversed = false, delay = 0}) {
             </div>
 
             <div className={`text-left ${reversed ? 'text-right' : ''}`}>
-                <h3 className='text-3xl md:text-3xl font-bold'>{name}</h3>
-                <p className='text-lg text-slate-400 font-semibold'>{desc}</p>
-                <button className='mt-12  px-6 py-4 bg-lavender-600 rounded-md text-white font-semibold'>View projects</button>
+                <h3 className='text-2xl md:text-3xl font-bold'>{name}</h3>
+                <p className='text-base md:text-lg text-slate-400 font-semibold'>{desc}</p>
+                <button className='mt-8 p-4 md:px-6 md:py-4 bg-lavender-600 rounded-md text-white font-semibold'>View projects</button>
             </div>
         </motion.div>
     )

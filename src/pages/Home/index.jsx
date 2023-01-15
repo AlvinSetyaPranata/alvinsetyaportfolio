@@ -114,7 +114,7 @@ function Home() {
         <section className={`flex flex-col ${section_baseclass}`}>
           <Decoration />
 
-          <div className='grid place-items-center md:px-4 md:place-items-start'>
+          <div className='grid my-auto place-items-center md:px-4 md:place-items-start'>
             <motion.h1
               className='text-4xl text-center font-bold text-lavender-600 md:text-7xl md:text-left font-headings'
               initial="hideHeading"
@@ -152,7 +152,7 @@ function Home() {
 
 
         {/* roles section */}
-        <section className={`flex items-center flex-col py-16 ${section_baseclass}`}>
+        <section className={`flex items-center flex-col py-8 ${section_baseclass}`}>
           <Quotes head='"We must use time as a tool, not as a couch"' body="John F. Kennedy" />
 
 
@@ -171,32 +171,32 @@ function Home() {
               className='px-4 py-2 grid place-items-center gap-y-12'
               variants={skillVariants}
             >
-              <img src="/ui-ux.png" alt="logo" className='w-[300px]' />
-              <h3 className='font-bold text-2xl'>UI/UX Designs</h3>
+              <img src="/ui-ux.png" alt="logo" className='w-[200px] md:w-[300px]' />
+              <h3 className='font-bold text-xl md:text-2xl'>UI/UX Designs</h3>
             </motion.div>
 
             <motion.div
               className='px-4 py-2 grid place-items-center gap-y-12'
               variants={skillVariants}
             >
-              <img src="/mobile-dev.png" alt="logo" className='w-[250px]' />
-              <h3 className='font-bold text-2xl'>Mobile Development</h3>
+              <img src="/mobile-dev.png" alt="logo" className='w-[150px] md:w-[250px]' />
+              <h3 className='font-bold text-xl md:text-2xl'>Mobile Development</h3>
             </motion.div>
 
             <motion.div
               className='px-4 py-2 grid place-items-center gap-y-12'
               variants={skillVariants}
             >
-              <img src="/desktop-dev.png" alt="logo" className='w-[400px]' />
-              <h3 className='font-bold text-2xl'>Desktop Development</h3>
+              <img src="/desktop-dev.png" alt="logo" className='w-[200px] md:w-[400px]' />
+              <h3 className='font-bold text-xl md:text-2xl'>Desktop Development</h3>
             </motion.div>
 
             <motion.div
               className='px-4 py-2 grid place-items-center gap-y-12'
               variants={skillVariants}
             >
-              <img src="/backend-dev.png" alt="logo" className='w-[190px]' />
-              <h3 className='font-bold text-2xl'>Backend Development</h3>
+              <img src="/backend-dev.png" alt="logo" className='w-[90px] md:w-[190px]' />
+              <h3 className='font-bold text-xl md:text-2xl'>Backend Development</h3>
             </motion.div>
 
           </motion.div>

@@ -81,7 +81,7 @@ function About() {
                     </div>
                 </section>
 
-                <section className={`${section_baseclass} flex flex-col gap-y-[80px] px-4 py-32`}>
+                <section className={`${section_baseclass} flex flex-col gap-y-[80px] px-4 py-16`}>
                     <div className='flex flex-col gap-y-[20px]'>
                         <motion.h3 
                         className='font-bold text-3xl md:text-4xl'
@@ -89,7 +89,7 @@ function About() {
                         whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1}}}
                         >Let me introduce myself</motion.h3>
                         <motion.p 
-                        className='font-semibold text-lg text-slate-400'
+                        className='font-semibold text-base md:text-lg text-slate-400'
                         initial={{y: 100, opacity: 0}}
                         whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5}}}
                         >My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</motion.p>
@@ -124,11 +124,11 @@ function About() {
 
                 <section className={`grid gap-y-16 px-4 ${section_baseclass}`}>
 
-                    <Quotes head='"Your project is your plant you grow"' body="Latest projects that i've made" />
+                    <Quotes head='"Your project is your plant that you grow"' body="Latest projects that i've made" />
 
-                    <h2 className='text-3xl font-bold'>My latest projects</h2>
+                    <h2 className='text-2xl md:text-3xl font-bold'>My latest projects</h2>
                     <motion.div
-                        className='grid gap-y-32'
+                        className='grid gap-y-24'
                         variants={containersVariants}
                         initial="init"
                         whileInView="visible"
