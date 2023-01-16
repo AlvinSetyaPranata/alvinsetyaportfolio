@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Navbar({ state, activeController }) {
 
-  const svg_base_class = 'p-2 xl:hidden rounded-md stroke-lavender-500 con '
+  const svg_base_class = 'p-2 md:hidden rounded-md stroke-lavender-500 con '
   
   const borderLink =  'before:absolute before:w-0 before:border-b-lavender-600 before:h-full before:border-b-4 before:py-[13px] before:hover:w-full rounded-md before:hover:transition-all before:hover:duration-300 before:hover:ease-in before:transition-all before:ease-out before:duration-300'
 
@@ -16,7 +16,7 @@ function Navbar({ state, activeController }) {
           <path d="m 20 60 h 60 " className="ham-path-3"></path>
         </svg>
       </div>
-      <div className='hidden xl:flex gap-x-16 box-border'>
+      <div className='hidden md:flex gap-x-12 xl:gap-x-16 box-border px-4'>
           <Link to="/" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>Home</Link>
           <Link to="/about" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>About</Link>
           <Link to="/projects" className={`font-semibold cursor pointer relative text-lavender-400 text-lg ${borderLink}`}>Projects</Link>

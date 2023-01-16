@@ -1,15 +1,19 @@
 {
   "name": "portofolio",
+  "homepage": "https://alvinsetya.my.id/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "purge": "tailwindcss -o build.css"
   },
   "dependencies": {
     "framer-motion": "^8.4.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"

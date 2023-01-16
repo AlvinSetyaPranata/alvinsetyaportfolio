@@ -8,7 +8,7 @@ import Quotes from '../../components/Quotes'
 
 
 function About() {
-    const section_baseclass = " h-max py-16  md:py-24 box-border min-w-full"
+    const section_baseclass = " h-max py-16  xl:py-24 box-border min-w-full"
 
     const containersVariants = {
         'init': {},
@@ -67,7 +67,7 @@ function About() {
             <div className='container h-max box-border max-w-[1200px] grid w-full mx-auto'>
                 <section className={'pt-24 ' + section_baseclass}>
                     <div className='mx-auto grid place-items-center w-full gap-y-[60px]'>
-                        <div className='w-[300px] md:w-[500px]'>
+                        <div className='w-[300px] xl:w-[500px]'>
                             <motion.img
                                 src="photo.jpg"
                                 alt="photo"
@@ -84,24 +84,24 @@ function About() {
                 <section className={`${section_baseclass} flex flex-col gap-y-[80px] px-4 py-16`}>
                     <div className='flex flex-col gap-y-[20px]'>
                         <motion.h3 
-                        className='font-bold text-3xl md:text-4xl'
+                        className='font-bold text-3xl xl:text-4xl'
                         initial={{x: -100, opacity: 0}}
                         whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1}}}
                         >Let me introduce myself</motion.h3>
                         <motion.p 
-                        className='font-semibold text-base md:text-lg text-slate-400'
+                        className='font-semibold text-base xl:text-lg text-slate-400'
                         initial={{y: 100, opacity: 0}}
                         whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5}}}
                         >My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</motion.p>
                     </div>
                     <div className='flex flex-col gap-y-[20px]'>
                         <motion.h3 
-                        className='font-bold text-3xl md:text-4xl'
+                        className='font-bold text-3xl xl:text-4xl'
                         initial={{x: -100, opacity: 0}}
                         whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1, delay: 0.3}}}
                         >My Expirience</motion.h3>
                         <motion.p 
-                        className='font-semibold text-lg md:text-xl text-slate-400'
+                        className='font-semibold text-lg xl:text-xl text-slate-400'
                         initial={{y: 100, opacity: 0}}
                         whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5, delay: 0.3}}}>
                         I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</motion.p>
@@ -112,7 +112,7 @@ function About() {
 
                     <Quotes head='"Your skills is your both hand"' body="I'm expirienced with technologies such as" />
 
-                    <motion.div className='grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 place-items-center' variants={containersVariants} initial="init" whileInView="visible">
+                    <motion.div className='grid grid-cols-1 xl:grid-cols-2 gap-16 mt-16 place-items-center' variants={containersVariants} initial="init" whileInView="visible">
                         <Group name="React JS" image="/react.png" desc="Understand how to make code more cleaner, how to create custom hooks, and how to use built-in hooks according to a specfic case, and integrating with the backend" />
                         <Group name="Django" image="/django-logo.png" desc="django is backend framework written in python, i often use it to make an API, authentication using JWT's token, user management, and other stuff's" />
                         <Group name="Figma" image="/figma.png" desc="Pretty much understand how to wireframing and make an ui/ux that can easily implemented by the frontend engineer without having a trouble" />
@@ -126,7 +126,7 @@ function About() {
 
                     <Quotes head='"Your project is your plant that you grow"' body="Latest projects that i've made" />
 
-                    <h2 className='text-2xl md:text-3xl font-bold'>My latest projects</h2>
+                    <h2 className='text-2xl xl:text-3xl font-bold'>My latest projects</h2>
                     <motion.div
                         className='grid gap-y-24'
                         variants={containersVariants}
@@ -138,26 +138,26 @@ function About() {
                     </motion.div>
                 </section>
 
-                <section className={`px-2 md:px-6 ${section_baseclass}`}>
+                <section className={`px-2 xl:px-6 ${section_baseclass}`}>
 
                     <Quotes head='"Take a breath for a while"' body='I also do some other activities in my spare time' />
 
 
                     <div className='grid mt-16 justify-center gap-y-16'>
-                        <div className='flex justify-center items-center gap-x-16 md:gap-x-24'>
-                            <div className='md:max-w-[50%]'>
-                                <h3 className='text-xl md:text-3xl font-bold'>Watching animes</h3>
-                                <p className='text-base md:text-xl font-semibold mt-4 text-slate-400'>I like watching an animes because sometimes it gives me some motivation and new idea</p>
+                        <div className='flex justify-center items-center gap-x-16 xl:gap-x-24'>
+                            <div className='xl:max-w-[50%]'>
+                                <h3 className='text-xl xl:text-3xl font-bold'>Watching animes</h3>
+                                <p className='text-base xl:text-xl font-semibold mt-4 text-slate-400'>I like watching an animes because sometimes it gives me some motivation and new idea</p>
                             </div>
-                            <img src="/anime.jpg" alt="img" className='w-[100px] md:w-[200px]' />
+                            <img src="/anime.jpg" alt="img" className='w-[100px] xl:w-[200px]' />
                         </div>
 
-                        <div className='flex justify-center items-center ga-x-16 md:gap-x-24'>
-                            <div className='md:max-w-[50%]'>
-                                <h3 className='text-xl md:text-3xl font-bold'>Playing games</h3>
-                                <p className='text-base text-slate-400 md:text-xl font-semibold'>Playing game help me to reduce my stress level</p>
+                        <div className='flex justify-center items-center ga-x-16 xl:gap-x-24'>
+                            <div className='xl:max-w-[50%]'>
+                                <h3 className='text-xl xl:text-3xl font-bold'>Playing games</h3>
+                                <p className='text-base text-slate-400 xl:text-xl font-semibold'>Playing game help me to reduce my stress level</p>
                             </div>
-                            <img src="/game.jpg" alt="img" className='w-[120px] md:w-[350px]' />
+                            <img src="/game.jpg" alt="img" className='w-[120px] xl:w-[350px]' />
                         </div>
                     </div>
                 </section>
@@ -172,21 +172,21 @@ function About() {
                     whileInView="visible"
                 >
                     <motion.h2
-                        className='text-2xl md:text-5xl font-bold text-white mb-4'
+                        className='text-2xl xl:text-5xl font-bold text-white mb-4'
                         variants={contactsVariants}
                     >Interested to collaborate me?</motion.h2>
                     <motion.p
-                        className='text-white text-xl font-semibold mb-12 md:mb-16 text-left'
+                        className='text-white text-xl font-semibold mb-12 xl:mb-16 text-left'
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1, transition: { type: "tween", duration: 0.4 } }}
                     >Contact me on</motion.p>
-                    <div className='flex items-center gap-4 md:gap-6'>
+                    <div className='flex items-center gap-4 xl:gap-6'>
                         <CircleLink linkTo="mailto:comand.alvin@gmail.com?subject=We want to hire you&body=messege" url="/gmail.png" />
                         <CircleLink linkTo="https://wa.me/6285334277450" url="/wa.png" />
                     </div>
                 </motion.div>
 
-                <button className='right-[10%] md:right-[25%] top-[50%] md:top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-4 md:px-6 bg-white absolute rounded-md'>
+                <button className='right-[10%] xl:right-[25%] top-[50%] xl:top-[40%] text-lavender-500 font-semibold text-sm xl:text-base py-[12px] xl:py-[12px] px-4 xl:px-6 bg-white absolute rounded-md'>
                     <Link to="/projects">My Projects</Link>
                 </button>
             </section>

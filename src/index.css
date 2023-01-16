@@ -4,34 +4,38 @@
 @tailwind utilities;
 
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
-    /* debug */
-
-    /* background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important; */
-
-}
-
-
-::-webkit-scrollbar {
-    background-color: transparent;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    @apply bg-lavender-600 rounded-md;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
 @layer base {
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    
+        /* debug */
+    
+        /* background: #000 !important;
+        color: #0f0 !important;
+        outline: solid #f00 1px !important; */
+    
+    }
+    
+    
+    ::-webkit-scrollbar {
+        background-color: transparent;
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-lavender-600 rounded-md;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
+
     svg {
         width: 15px;
     }
@@ -113,8 +117,7 @@ html {
     }
 
     /* main navigation */
-    .navigation {
-        @apply bg-lavender-600 h-screen w-full fixed z-20;
+    /* .navigation {
         transform: translateY(-100%);
         opacity: 0;
         transition: all 500ms ease;
@@ -123,7 +126,7 @@ html {
     .navigation.active {
         transform: translateY(0);
         opacity: 1;
-    }
+    } */
 
     /* navlink */
 

@@ -5,7 +5,7 @@ import Quotes from '../../components/Quotes'
 
 function index() {
     const section_baseclass = " h-max px-2 py-12 box-border min-w-full"
-    const image_baseclass = "w-[400px] md:w-[500px] rounded-md"
+    const image_baseclass = "w-[400px] xl:w-[500px] rounded-md"
 
     const parentVariants = {
         'initial': {

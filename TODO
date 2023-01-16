@@ -15,7 +15,8 @@ DEVELOPMENT-2:
     ✔ create projects page (more details) @done(23-01-10 11:29)
     ✔ add page icon @done(23-01-10 11:29)
     ✔ make scroll based animation using framer-motion in hero section, skills section, contact section @started(23-01-12 04:02) @done(23-01-13 14:36) @lasted(1d10h34m17s)
-    ☐ make a floating decoration like in chrome welcome page ( element theme)
-    ☐ Preview on mobile devices
-    ☐ Check on build production
-    ☐ Deploy to github
+    ✔ make a floating decoration like in chrome welcome page ( element theme) @done(23-01-16 04:00)
+    ✔ Preview on mobile devices @done(23-01-16 04:00)
+    ✔ Check on build production @done(23-01-16 04:00)
+    ✔ Fix tailwind purging errors @done(23-01-16 08:38)
+    ✔ Deploy to github @done(23-01-16 08:38)
