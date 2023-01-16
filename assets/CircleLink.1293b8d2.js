@@ -1,0 +1,1 @@
+import{a as r}from"./index.6e926003.js";function m({url:a,linkTo:e}){return r("div",{className:"rounded-full w-max md:mr-2 ",children:r("a",{href:e,children:r("img",{src:a,className:"w-[40px] md:w-[60px]",alt:"icon"})})})}export{m as C};
