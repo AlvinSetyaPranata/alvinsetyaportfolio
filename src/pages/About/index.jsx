@@ -67,10 +67,11 @@ function About() {
             <div className='container h-max box-border max-w-[1200px] grid w-full mx-auto'>
                 <section className={'pt-24 ' + section_baseclass}>
                     <div className='mx-auto grid place-items-center w-full gap-y-[60px]'>
-                        <div className='w-[300px] xl:w-[500px]'>
+                        <div className='w-[300px] xl:w-[600px]'>
                             <motion.img
-                                src="photo.jpg"
+                                src="photo.png"
                                 alt="photo"
+                                className='w-full h-full'
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: [0, 0.75, 1], transition: { type: "spring", duration: 1 } }}
 
