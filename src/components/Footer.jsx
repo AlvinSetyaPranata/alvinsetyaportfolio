@@ -19,11 +19,11 @@ function Footer() {
                 <div className='md:grid place-items-center hidden'>
                     <h2 className='font-semibold text-center whitespace-nowrap text-xl'>This website is built on</h2>
                     <div className='flex justify-center items-center gap-x-[40px] mt-[20px] w-full'>
-                        <img src="/tailwind.svg" className='w-[30px]' alt="logo" />
+                        <img src="/tailwind.svg" className='w-[40px]' alt="logo" />
 
-                        <img src="/reactjs.png" alt="logo" className='w-[30px] flex-shrink-0 flex-grow-0' />
+                        <img src="/reactjs.png" alt="logo" className='w-[40px] flex-shrink-0 flex-grow-0' />
 
-                        <img src="/framer.png" alt="logo" className='w-[25px] flex-shrink-0 flex-grow-0' />
+                        <img src="/framer.png" alt="logo" className='w-[35px] flex-shrink-0 flex-grow-0' />
                     </div>
                     <div>
 

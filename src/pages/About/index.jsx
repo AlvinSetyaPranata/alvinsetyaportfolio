@@ -46,11 +46,11 @@ function About() {
             }
         },
 
-        'exit' : { 
-            x: [0, -500], 
-            opacity: 0, 
-            transition: { 
-                ease: "easeOut", 
+        'exit': {
+            x: [0, -500],
+            opacity: 0,
+            transition: {
+                ease: "easeOut",
                 duration: 0.5,
             }
         }
@@ -59,10 +59,10 @@ function About() {
 
     return (
         <motion.div
-        variants={parentVariants}
-        initial='init'
-        animate='visible'
-        exit='exit'
+            variants={parentVariants}
+            initial='init'
+            animate='visible'
+            exit='exit'
         >
             <div className='container h-max box-border max-w-[1200px] grid w-full mx-auto'>
                 <section className={'pt-24 ' + section_baseclass}>
@@ -84,28 +84,28 @@ function About() {
 
                 <section className={`${section_baseclass} flex flex-col gap-y-[80px] px-4 py-16`}>
                     <div className='flex flex-col gap-y-[20px]'>
-                        <motion.h3 
-                        className='font-bold text-3xl xl:text-4xl'
-                        initial={{x: -100, opacity: 0}}
-                        whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1}}}
+                        <motion.h3
+                            className='font-bold text-3xl xl:text-4xl'
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1, transition: { type: "spring", duration: 1 } }}
                         >Let me introduce myself</motion.h3>
-                        <motion.p 
-                        className='font-semibold text-base xl:text-lg text-slate-400'
-                        initial={{y: 100, opacity: 0}}
-                        whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5}}}
+                        <motion.p
+                            className='font-semibold text-base xl:text-lg text-slate-400'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1, transition: { type: "tween", duration: 0.5 } }}
                         >My name is Alvin Setya Pranata, I'm college student's that focusing on Desktop, Website, and Mobile development, i've been expirienced for about 4 years, I started to get involved in programming when I was 14 years old, and since then I have been in first grade of high school, I learned about programming language self-taught, and I often work together with my classmates to make a project that can improve skills and knowledge</motion.p>
                     </div>
                     <div className='flex flex-col gap-y-[20px]'>
-                        <motion.h3 
-                        className='font-bold text-3xl xl:text-4xl'
-                        initial={{x: -100, opacity: 0}}
-                        whileInView={{x: 0, opacity: 1, transition: {type: "spring", duration: 1, delay: 0.3}}}
+                        <motion.h3
+                            className='font-bold text-3xl xl:text-4xl'
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1, transition: { type: "spring", duration: 1, delay: 0.3 } }}
                         >My Expirience</motion.h3>
-                        <motion.p 
-                        className='font-semibold text-lg xl:text-xl text-slate-400'
-                        initial={{y: 100, opacity: 0}}
-                        whileInView={{y: 0, opacity: 1, transition: {type: "tween", duration: 0.5, delay: 0.3}}}>
-                        I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</motion.p>
+                        <motion.p
+                            className='font-semibold text-lg xl:text-xl text-slate-400'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1, transition: { type: "tween", duration: 0.5, delay: 0.3 } }}>
+                            I've been working with popular framework such as React JS, Django, and Postgress to build website, and I once won 3rd place in a web design festival contest in Universitas Muhamaadiyah, and I also have expirience in freelancer</motion.p>
                     </div>
                 </section>
 
@@ -135,7 +135,7 @@ function About() {
                         whileInView="visible"
                     >
                         <CardSkills url="/weebstore.png" name="Weebstore" desc="A right place for otaku that have anything they needed" />
-                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" reversed={true} delay={0.4}/>
+                        <CardSkills url="/sheetwriter.png" name="Sheetwriter" desc="An application that help my father to make his work more efficient" reversed={true} delay={0.4} />
                     </motion.div>
                 </section>
 
@@ -184,6 +184,7 @@ function About() {
                     <div className='flex items-center gap-4 xl:gap-6'>
                         <CircleLink linkTo="mailto:comand.alvin@gmail.com?subject=We want to hire you&body=messege" url="/gmail.png" />
                         <CircleLink linkTo="https://wa.me/6285334277450" url="/wa.png" />
+                        <CircleLink linkTo="https://www.linkedin.com/in/alvin-setya-3b23511b6" url="/linkedin.png" />
                     </div>
                 </motion.div>
 

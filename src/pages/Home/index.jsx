@@ -221,10 +221,11 @@ function Home() {
           <div className='flex items-center gap-4 md:gap-6'>
             <CircleLink linkTo="mailto:comand.alvin@gmail.com?subject=We want to hire you&body=messege" url="/gmail.png" />
             <CircleLink linkTo="https://wa.me/6285334277450" url="/wa.png" />
+            <CircleLink linkTo="https://www.linkedin.com/in/alvin-setya-3b23511b6" url="/linkedin.png" />
           </div>
         </motion.div>
 
-        <button className='right-[10%] md:right-[25%] top-[50%] md:top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-4 md:px-6 bg-white absolute rounded-md'>My Projects</button>
+        <Link className='right-[10%] md:right-[25%] top-[50%] md:top-[40%] text-lavender-500 font-semibold text-sm md:text-base py-[12px] md:py-[12px] px-4 md:px-6 bg-white absolute rounded-md' to="/projects">My Projects</Link>
       </section>
 
     </motion.div>
