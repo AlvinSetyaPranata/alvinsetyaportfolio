@@ -10,6 +10,7 @@ module.exports = {
         'lavender-600': '#7871EE',
         'lavender-500': '#9690F3',
         'lavender-400': '#B1ADFB',
+        'blur-white' : 'linear-gradient(180deg, rgba(255, 255, 255, 0.53) 9.72%, rgba(255, 255, 255, 0) 100%);'
       },
       'animation' : {
         'navIconActive' : 'nav_icon_active 500ms forwards ease-in',

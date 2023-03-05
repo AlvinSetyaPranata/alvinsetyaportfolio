@@ -23,7 +23,7 @@ function Quotes({ head, body, delay=0 }) {
     return (
         <div className='gap-y-[10px] grid place-items-center'>
             <motion.h2
-                className='text-3xl md:text-6xl font-bold text-lavender-600 text-center md:whitespace-nowrap'
+                className='text-3xl xl:text-6xl font-bold text-lavender-600 text-center md:whitespace-nowrap'
                 variants={quotesVariants}
                 initial="hide"
                 whileInView="visible"
