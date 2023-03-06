@@ -27,7 +27,7 @@ function CardSkills({ img_url, name, desc, url ,reversed = false, delay = 0}) {
         variants={variants}
         >
             <div className='img-scale-wrapper'>
-                <Image src={img_url} alt="image" width={400} height={400} className='md:w-[400px] rounded-md' />
+                <Image src={img_url} alt="image" width={400} height={400} className='md:w-[400px] rounded-md' placeholder='blur' blurDataURL='/blur.svg'/>
             </div>
 
             <div className={`text-left ${reversed ? 'text-right' : ''}`}>

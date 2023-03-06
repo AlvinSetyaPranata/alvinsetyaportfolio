@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import Quotes from '@/components/Quotes'
 import Image from 'next/image'
 
@@ -82,6 +82,8 @@ function index() {
         }
     }
 
+    const [isLoading, setIsLoading] = useState({1 : false, 2 : false, 3 : false, 4 : false})
+
     return (
         <motion.div
             className='container h-max box-border max-w-[1200px] grid w-full mx-auto'
@@ -98,19 +100,17 @@ function index() {
                     initial='init'
                     whileInView='visible'
                 >
-                    <Suspense fallback={<Image src='/blur.svg' alt='blur-img' priority={true} />}>
-                        <motion.div variants={imgVariants}>
-                            <Image onLoadingComplete={() => console.log(1)} className='rounded-md w-auto h-auto' loading='lazy' src='/sheetwriter.png' alt="img" width={500} height={500} />
-                        </motion.div>
-                    </Suspense>
                     <motion.div variants={imgVariants}>
-                        <Image placeholder='blur' onLoadingComplete={() => console.log(2)} className={`rounded-md w-auto h-auto ${'animate-pulse'}`} src="/weebstore.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
+                        <Image placeholder='blur' className={`rounded-md w-auto h-auto ${'animate-pulse' ? isLoading[0] : ''}`} src="/sheetwriter.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' onLoadingComplete={() => setIsLoading({...isLoading, 1 : true})}/>
                     </motion.div>
                     <motion.div variants={imgVariants}>
-                        <Image placeholder='blur' onLoadingComplete={() => console.log(3)} className='rounded-md w-auto h-auto' src="/simat.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
+                        <Image placeholder='blur' onLoadingComplete={() => setIsLoading({...isLoading, 2 : true})} className={`rounded-md w-auto h-auto ${'animate-pulse' ? isLoading[1] : ''}`} src="/weebstore.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
                     </motion.div>
                     <motion.div variants={imgVariants}>
-                        <Image placeholder='blur' onLoadingComplete={() => console.log(4)} className='rounded-md w-auto h-auto' src="/kraeplit.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
+                        <Image placeholder='blur' onLoadingComplete={() => setIsLoading({...isLoading, 3 : true})} className={`rounded-md w-auto h-auto ${'animate-pulse' ? isLoading[2] : ''}`} src="/simat.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
+                    </motion.div>
+                    <motion.div variants={imgVariants}>
+                        <Image placeholder='blur' onLoadingComplete={() => setIsLoading({...isLoading, 4 : true})} className={`rounded-md w-auto h-auto ${'animate-pulse' ? isLoading[3] : ''}`} src="/kraeplit.png" alt="img" width={500} height={500} blurDataURL='/blur.svg' />
                     </motion.div>
 
                 </motion.div>

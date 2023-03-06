@@ -69,15 +69,7 @@ function About() {
                 <section className={'pt-24 ' + section_baseclass}>
                     <div className='mx-auto grid place-items-center w-full xl:gap-y-[60px] gap-y-[30px]'>
                         <div className='w-[300px] xl:w-[600px] md:w-[500px] h-max relative bg-red-500'>
-                            {/* <motion.img
-                                src="photo.png"
-                                alt="photo"
-                                className='w-full h-full'
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: [0, 0.75, 1], transition: { type: "spring", duration: 1 } }}
-
-                            /> */}
-                            <Image src="/photo.png" className='min-w-full' alt="photo" width={400} height={400}/>
+                            <Image src="/photo.png" className='min-w-full' alt="photo" width={400} height={400} placeholder='blur' blurDataURL='/blur.svg'/>
                         </div>
 
                         <Quotes head="True learning begins with right intention" body="Alvin Setya Pranata" />
@@ -122,7 +114,7 @@ function About() {
                         <Group name="Postgresql" image="/postgresql.png" desc="A database system that have a lot features that other system doesn't have and also it's easy to learn" />
                         <Group name="Framer Motion" image="/framer.png" desc="Like a GSAP which can handle animation, but it's easy to work within reactjs and make code more clean. also it can create an animation from scratch" />
                         <Group name="Tailwindcss" image="/tailwind.svg" desc="Most of my web projects use this framework because it has an ability to write css inline. this is one of the advantages that i like to save my production time" />
-                        <Group name="Next JS" image="/nextjs.png" desc="The React framework for the web. this framework use rust as its tool for the fastest build. and next used by some of the world's largest companies. next enables us to create full-stack web application by extending the latest of react features." />
+                        <Group name="Next JS" image="/nextjs.png" desc="The React framework for the web. this framework use turbopack as it's bundler which faster than webpack. Next are used by some of the world's largest companies. next enables us to create full-stack web application by extending the latest features of reactjs." />
                     </motion.div>
                 </section>
 

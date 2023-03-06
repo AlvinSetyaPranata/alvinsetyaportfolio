@@ -24,6 +24,6 @@ DEVELOPMENT-2:
 
 DEVELOPMENT-3:
     ✔ Migrate from reactjs to nextjs @done(23-03-06 07:21)
-    ☐ change all image to Next Image component
-    ☐ use all images to have skeleton animation while on-loading
+    ✔ change all image to Next Image component @done(23-03-06 16:37)
+    ✔ use all images to have skeleton animation while on-loading @done(23-03-06 16:37)
     
