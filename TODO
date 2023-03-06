@@ -20,3 +20,10 @@ DEVELOPMENT-2:
     ✔ Check on build production @done(23-01-16 04:00)
     ✔ Fix tailwind purging errors @done(23-01-16 08:38)
     ✔ Deploy to github @done(23-01-16 08:38)
+
+
+DEVELOPMENT-3:
+    ✔ Migrate from reactjs to nextjs @done(23-03-06 07:21)
+    ☐ change all image to Next Image component
+    ☐ use all images to have skeleton animation while on-loading
+    

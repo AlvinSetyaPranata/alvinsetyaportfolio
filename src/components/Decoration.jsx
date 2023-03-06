@@ -69,7 +69,7 @@ function Decoration() {
             initial='path-initial'
             animate='path-animate'
             id="Vector 7"
-            d="M36.47 36.9807C-10.2114 159.52 227.865 63.8226 254.707 124.509C281.548 185.195 46.9734 209.703 46.9734 248.215C46.9734 286.727 173.582 284.49 254.707 307.734" stroke="#9590F3" stroke-width="4" stroke-linecap="round" />
+            d="M36.47 36.9807C-10.2114 159.52 227.865 63.8226 254.707 124.509C281.548 185.195 46.9734 209.703 46.9734 248.215C46.9734 286.727 173.582 284.49 254.707 307.734" stroke="#9590F3" strokeWidth="4" strokeLinecap="round" />
           <circle id="Ellipse 40" cx="35.5582" cy="35.5582" r="27.0243" fill="white" />
           <circle id="Ellipse 40_2" cx="257.441" cy="305.801" r="27.0243" fill="white" onClick={() => console.log(pathRef.current)} />
         </g>
